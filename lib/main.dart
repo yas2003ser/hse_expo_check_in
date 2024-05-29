@@ -4,5 +4,3 @@ import 'package:hse_expo_check/app.dart';
 void main() {
   runApp(const MyApp());
 }
-
-
