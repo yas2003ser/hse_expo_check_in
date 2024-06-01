@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hse_expo_check/screen/home/home_screen.dart';
+import 'package:hse_expo_check/screen/home/home.dart';
+
 
 class GetStartedScreen extends StatelessWidget {
   const GetStartedScreen({super.key});
@@ -31,7 +32,7 @@ class GetStartedScreen extends StatelessWidget {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => const HomeScreen()));
+                                  builder: (context) => const NavHome()));
                         },
                         child: const Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
