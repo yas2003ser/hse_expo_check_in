@@ -1,6 +1,6 @@
 import 'package:another_flutter_splash_screen/another_flutter_splash_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:hse_expo_check/screen/home/home_screen.dart';
+import 'package:hse_expo_check/screen/get_started.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
@@ -9,8 +9,13 @@ class SplashScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: FlutterSplashScreen.fadeIn(
+        backgroundImage: Image.asset("assets/bg.jpg",
+            width: MediaQuery.of(context).size.width,
+            height: MediaQuery.of(context).size.height,
+            fit: BoxFit.cover),
+        animationDuration: const Duration(milliseconds: 500),
         duration: const Duration(seconds: 5),
-        nextScreen: const HomeScreen(),
+        nextScreen: const GetStartedScreen(),
         childWidget: Stack(
           alignment: Alignment.center,
           children: [
@@ -42,25 +47,3 @@ class SplashScreen extends StatelessWidget {
     );
   }
 }
-
-
-
-// Center(
-//                 child: Column(
-//                   mainAxisAlignment: MainAxisAlignment.center,
-//                   children: [
-//                     CircularProgressIndicator(
-//                       valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
-//                     ),
-//                     SizedBox(height: 20),
-//                     Text(
-//                       'HSE Expo Check',
-//                       style: TextStyle(
-//                         color: Colors.white,
-//                         fontSize: 24,
-//                         fontWeight: FontWeight.bold,
-//                       ),
-//                     ),
-//                   ],
-//                 ),
-//               // ),
